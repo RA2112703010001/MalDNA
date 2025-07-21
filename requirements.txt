@@ -1,0 +1,46 @@
+# Core Flask Dependencies
+Flask==2.3.2
+flask-restful==0.3.10
+flask-jwt-extended==4.5.2
+flask-cors==4.0.0
+flask-limiter==3.3.1
+flask-talisman==1.0.0
+
+# Security Dependencies
+cryptography==41.0.3
+python-jose==3.3.0
+werkzeug==2.3.6
+bcrypt==4.0.1
+
+# Database and ORM
+mongoengine==0.27.0
+pymongo==4.5.0
+
+# Logging and Monitoring
+structlog==23.1.0
+python-json-logger==2.0.7
+
+# Input Validation
+email-validator==2.0.0.post2
+
+# Rate Limiting and Security
+limits==3.5.0
+blinker==1.6.2
+
+# Development and Testing
+pytest==7.4.0
+pytest-flask==1.2.0
+coverage==7.3.0
+black==23.7.0
+mypy==1.5.1
+
+# Deployment and Performance
+gunicorn==20.1.0
+gevent==23.7.0
+
+# Optional Performance and Caching
+redis==4.6.0
+cachetools==5.3.1
+
+# Additional Utilities
+python-dotenv==1.0.0
