@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real-Time Malware Detection - MalDNA</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <img src="/home/kali/MalDNA/frontend/assets/images/maldna-logo.png" alt="MalDNA Logo" class="header-image" />
+    <h1>Real-Time Malware Detection</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Real-Time Detection Status -->
+    <section class="realtime-section">
+      <h2>Real-Time Detection Status</h2>
+      <div id="detection-status-container" class="result-box">
+        <p>Loading real-time detection status...</p>
+      </div>
+    </section>
+
+    <!-- Active Threats -->
+    <section class="realtime-section">
+      <h2>Active Threats</h2>
+      <div id="active-threats-container" class="result-box">
+        <p>No active threats detected yet.</p>
+      </div>
+    </section>
+
+    <!-- Predict Future Threats -->
+    <section class="realtime-section">
+      <h2>Predict Future Threats</h2>
+      <button id="predict-threats-btn">Predict Threats</button>
+      <pre id="threat-prediction-result" class="result-box"></pre>
+    </section>
+
+    <!-- Incident Response -->
+    <section class="realtime-section">
+      <h2>Automated Incident Response</h2>
+      <button id="incident-response-btn">Trigger Response</button>
+      <pre id="incident-response-result" class="result-box"></pre>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Malware DNA Analysis Platform</p>
+  </footer>
+
+  <!-- JavaScript Modules -->
+  <script type="module" src="../js/api.js"></script>
+  <script type="module" src="../js/realtime.js"></script>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
+

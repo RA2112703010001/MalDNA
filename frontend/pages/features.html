@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feature Extraction & Dataset Management - MalDNA</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Feature Extraction & Dataset Management</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Extract Features -->
+    <section class="features-section">
+      <h2>🧬 Extract Features</h2>
+      <img src="../assets/images/feature_extract.png" alt="Feature Extraction Illustration" style="max-width: 100%; height: auto; margin-bottom: 15px;" />
+      <form id="extract-features-form">
+        <label for="sample-id">Sample ID:</label>
+        <input type="text" id="sample-id" placeholder="Enter Sample ID" required />
+        <button type="submit">Extract Features</button>
+      </form>
+      <pre id="feature-extraction-result" class="dna-result-block"></pre>
+    </section>
+
+    <!-- List Datasets -->
+    <section class="features-section">
+      <h2>📁 Dataset Management</h2>
+      <img src="../assets/images/datasets.png" alt="Datasets Overview" style="max-width: 100%; height: auto; margin-bottom: 15px;" />
+      <button id="list-datasets-btn">List Datasets</button>
+      <div id="datasets-container" class="dna-result-block"></div>
+    </section>
+
+    <!-- Add Sample -->
+    <section class="features-section">
+      <h2>➕ Add Sample to Dataset</h2>
+      <form id="add-sample-form">
+        <label for="dataset-id-add">Dataset ID:</label>
+        <input type="text" id="dataset-id-add" placeholder="Enter Dataset ID" required />
+        <label for="sample-id-add">Sample ID:</label>
+        <input type="text" id="sample-id-add" placeholder="Enter Sample ID" required />
+        <button type="submit">Add Sample</button>
+      </form>
+      <div id="add-sample-result" class="dna-result-block"></div>
+    </section>
+
+    <!-- Remove Sample -->
+    <section class="features-section">
+      <h2>➖ Remove Sample from Dataset</h2>
+      <form id="remove-sample-form">
+        <label for="dataset-id-remove">Dataset ID:</label>
+        <input type="text" id="dataset-id-remove" placeholder="Enter Dataset ID" required />
+        <label for="sample-id-remove">Sample ID:</label>
+        <input type="text" id="sample-id-remove" placeholder="Enter Sample ID" required />
+        <button type="submit">Remove Sample</button>
+      </form>
+      <div id="remove-sample-result" class="dna-result-block"></div>
+    </section>
+
+    <!-- Label Sample -->
+    <section class="features-section">
+      <h2>🏷️ Label Sample</h2>
+      <form id="label-sample-form">
+        <label for="sample-id-label">Sample ID:</label>
+        <input type="text" id="sample-id-label" placeholder="Enter Sample ID" required />
+        <label for="label">Label:</label>
+        <select id="label" required>
+          <option value="benign">Benign</option>
+          <option value="malicious">Malicious</option>
+        </select>
+        <button type="submit">Label Sample</button>
+      </form>
+      <div id="label-sample-result" class="dna-result-block"></div>
+    </section>
+
+    <!-- Export Dataset -->
+    <section class="features-section">
+      <h2>📤 Export Dataset</h2>
+      <form id="export-dataset-form">
+        <label for="dataset-id-export">Dataset ID:</label>
+        <input type="text" id="dataset-id-export" placeholder="Enter Dataset ID" required />
+        <button type="submit">Export Dataset</button>
+      </form>
+      <div id="export-dataset-result" class="dna-result-block"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Malware DNA Analysis Platform</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script type="module" src="../js/api.js"></script>
+  <script type="module" src="../js/features.js"></script>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
+

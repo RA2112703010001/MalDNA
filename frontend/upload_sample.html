@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Malware Sample - MalDNA</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  </head>
+<body>
+  <!-- Header -->
+  <div id="header"></div>
+
+  <!-- Sidebar -->
+  <div id="sidebar"></div>
+
+  <main class="upload-main">
+    <section class="upload-section">
+      <h2>Upload Malware Sample</h2>
+      <form id="upload-sample-form" enctype="multipart/form-data">
+        <label for="sample-file">Select File:</label>
+        <input type="file" id="sample-file" name="file" required>
+
+        <label for="sample-name">Sample Name:</label>
+        <input type="text" id="sample-name" name="name" placeholder="Enter Sample Name">
+
+        <label for="sample-description">Description:</label>
+        <textarea id="sample-description" name="description" placeholder="Enter Description"></textarea>
+
+        <button type="submit">Upload Sample</button>
+      </form>
+      <div id="upload-result"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- JavaScript Files -->
+  <script src="../js/api.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const api = new API();
+
+      // Handle form submission
+      document.getElementById("upload-sample-form").addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData();
+        const fileInput = document.getElementById("sample-file");
+        const sampleName = document.getElementById("sample-name").value;
+        const sampleDescription = document.getElementById("sample-description").value;
+
+        // Append file and metadata to FormData
+        formData.append("file", fileInput.files[0]);
+        if (sampleName) formData.append("name", sampleName);
+        if (sampleDescription) formData.append("description", sampleDescription);
+
+        try {
+          const response = await api.post("/api/malware/upload", formData, {
+            headers: { "Content-Type": "multipart/form-data" },
+          });
+          document.getElementById("upload-result").innerText = `Upload Successful! Sample ID: ${response.sample_id}`;
+        } catch (error) {
+          console.error("Error uploading sample:", error);
+          document.getElementById("upload-result").innerText = "Error uploading sample. Please try again.";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

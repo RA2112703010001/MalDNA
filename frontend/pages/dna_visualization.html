@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DNA Visualization - MalDNA</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Malware DNA Visualization</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="dna-section">
+      <h2>Visualize Malware DNA Sequence</h2>
+      <form id="dna-visualization-form">
+        <label for="dna-sample-id">Sample ID:</label>
+        <input type="text" id="dna-sample-id" placeholder="Enter Sample ID" required />
+        <button type="submit">Visualize</button>
+      </form>
+      <div id="dna-visualization-result" class="dna-result-block"></div>
+      <div id="dna-graph-container"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Malware DNA Analysis Platform</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script type="module" src="../js/api.js"></script>
+  <script type="module" src="../js/dna_visualization.js"></script>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
+

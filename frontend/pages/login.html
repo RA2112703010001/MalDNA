@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Management - MalDNA</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <style>
+    /* Global Loader Style */
+    #global-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      z-index: 9999;
+    }
+
+    .loader p {
+      animation: spin 2s infinite linear;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body style="background-image: url('../assets/images/background_main.png'); background-size: cover;">
+
+  <!-- Global Loader -->
+  <div id="global-loader" class="loader" style="display: none;">
+    <p>Loading...</p>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <img src="../assets/images/user_access_management_portal.png" alt="User Access" class="header-image" />
+    <h1>MalDNA User Access Portal</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- 🔐 Login -->
+    <section class="user-section">
+      <h2>User Login</h2>
+      <form id="loginForm">
+        <label for="username">Email:</label>
+        <input type="email" id="username" placeholder="Enter your email" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+
+        <button type="submit">Login</button>
+      </form>
+      <div id="loginMessage" class="result-box"></div>
+    </section>
+
+    <!-- 👥 User List -->
+    <section class="user-section">
+      <h2>Admin: List Users</h2>
+      <button id="list-users-btn">Fetch Users</button>
+      <div id="user-list" class="result-box"></div>
+    </section>
+
+    <!-- 🛠️ Update Role -->
+    <section class="user-section">
+      <h2>Admin: Update User Role</h2>
+      <form id="update-role-form">
+        <label for="user-id">User ID:</label>
+        <input type="text" id="user-id" placeholder="User ID" required />
+
+        <label for="new-role">New Role:</label>
+        <input type="text" id="new-role" placeholder="e.g., admin, analyst" required />
+
+        <button type="submit">Update Role</button>
+      </form>
+      <div id="role-update-result" class="result-box"></div>
+    </section>
+
+    <!-- ❌ Deactivate User -->
+    <section class="user-section">
+      <h2>Admin: Deactivate User</h2>
+      <form id="deactivate-user-form">
+        <label for="deactivate-user-id">User ID:</label>
+        <input type="text" id="deactivate-user-id" placeholder="User ID" required />
+        <button type="submit">Deactivate</button>
+      </form>
+      <div id="deactivate-user-result" class="result-box"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Malware DNA Analysis Platform</p>
+  </footer>
+
+  <!-- External JS Scripts -->
+  <script type="module" src="../js/utils.js"></script>
+  <script type="module" src="../js/login.js"></script>
+
+</body>
+</html>
+

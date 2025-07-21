@@ -1,0 +1,525 @@
+/* responsive.css */
+
+@media screen and (max-width: 1024px) {
+  .dashboard-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-card {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  .options-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .site-header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .header-image {
+    max-width: 100px;
+  }
+
+  .user-section,
+  .mutation-section,
+  .lineage-section,
+  .realtime-section {
+    padding: 1rem;
+  }
+
+  form input,
+  form button {
+    font-size: 1rem;
+  }
+
+  .options-grid {
+    flex-direction: column;
+  }
+
+  .action-button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .user-section {
+    margin: 1rem 0;
+  }
+
+  .result-box {
+    font-size: 0.9rem;
+  }
+
+  form input,
+  form select {
+    font-size: 0.9rem;
+  }
+
+  form button,
+  .action-button {
+    padding: 12px;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .dashboard-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+.stats-grid,
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  body, main {
+    padding: 1rem;
+  }
+
+  form {
+    gap: 0.8rem;
+  }
+
+  input, button {
+    width: 100%;
+  }
+
+  .stat-card, .link-card {
+    text-align: center;
+  }
+}
+.dna-section {
+  background-color: #131c31;
+  border: 1px solid #00e0ff40;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+}
+
+.dna-section h2 {
+  margin-bottom: 1rem;
+  color: #00e5ff;
+}
+
+.dna-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dna-section label {
+  font-weight: bold;
+  color: #b2f5ff;
+}
+
+.dna-section input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #00e0ff60;
+  background-color: #0e1525;
+  color: #ffffff;
+}
+
+.dna-section button {
+  padding: 0.6rem 1.2rem;
+  background-color: #00e5ff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dna-section button:hover {
+  background-color: #00bcd4;
+}
+
+.dna-result-block {
+  background-color: #0d1320;
+  border: 1px solid #00c2ff40;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #c4f4ff;
+  font-family: "Courier New", Courier, monospace;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+/* DNA Graph Container */
+#dna-graph-container {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #101a2e;
+  border: 1px solid #00ffff33;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#dna-graph-container svg {
+  width: 100%;
+  height: 500px;
+}
+/* responsive.css */
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    padding: 0 10px;
+  }
+
+  .dna-section {
+    padding: 15px;
+  }
+
+  form input[type="text"] {
+    font-size: 16px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  #dna-graph-container svg {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .dna-section h2 {
+    font-size: 18px;
+  }
+
+  .dna-result-block {
+    font-size: 14px;
+  }
+}
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .features-section, .dna-visualization-section {
+    padding: 15px;
+  }
+
+  input[type="text"], select, button {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .dna-result-block {
+    font-size: 0.9rem;
+  }
+}
+/* Responsive Layout */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .forensics-section {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  input[type="text"],
+  input[type="file"],
+  button {
+    width: 100%;
+  }
+
+  .analysis-options {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .dna-result-block {
+    font-size: 0.85rem;
+  }
+}
+/* responsive.css */
+
+/* Mobile First */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hybrid-section {
+    padding: 15px;
+    margin: 20px;
+  }
+
+  form {
+    gap: 10px;
+  }
+
+  input[type="text"],
+  input[type="file"],
+  button {
+    font-size: 0.95rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablets and Up */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .hybrid-section {
+    margin: 30px 40px;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    padding: 20px 10px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .lineage-section {
+    margin-bottom: 30px;
+  }
+
+  #phylogenetic-tree-container svg {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .dna-result-block {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+/* responsive.css */
+
+@media screen and (max-width: 768px) {
+  .site-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .site-header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .user-section {
+    padding: 1rem;
+  }
+
+  .header-image {
+    max-width: 120px;
+  }
+
+  form input,
+  form button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .user-section {
+    margin: 1rem 0;
+  }
+
+  .result-box {
+    font-size: 0.9rem;
+  }
+
+  form input {
+    font-size: 0.9rem;
+  }
+
+  form button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+/* responsive.css */
+
+@media screen and (max-width: 768px) {
+  .site-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .site-header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .user-section {
+    padding: 1.2rem;
+  }
+
+  .header-image {
+    max-width: 120px;
+  }
+
+  form input,
+  form button {
+    font-size: 1rem;
+  }
+
+  .options-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .user-section {
+    margin: 1rem 0;
+  }
+
+  .result-box {
+    font-size: 0.9rem;
+  }
+
+  form input {
+    font-size: 0.9rem;
+  }
+
+  form button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+/* =============== Responsive Styles =============== */
+@media (max-width: 1024px) {
+  .dashboard-stats {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  main#content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .stat-card {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    width: 100%;
+  }
+
+  form input[type="text"],
+  form input[type="file"] {
+    max-width: 100%;
+  }
+
+  .dashboard-stats {
+    gap: 1rem;
+  }
+}
+

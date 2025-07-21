@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - MalDNA</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/blockchain.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Malware DNA Analysis Dashboard</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="malware.html">Malware Analysis</a></li>
+        <li><a href="dna.html">DNA Analysis</a></li>
+        <li><a href="lineage.html">Lineage Tracking</a></li>
+        <li><a href="blockchain.html">Blockchain</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="glass-container">
+    <section class="block-form-section">
+      <h2>📊 Real-Time Threat Statistics</h2>
+      <button id="fetch-stats-btn">Fetch Stats</button>
+
+      <!-- ✅ Added container for dynamic stats injection -->
+      <div id="stats-container" class="stats-grid"></div>
+
+      
+    <section class="block-form-section">
+      <h2>🚀 Quick Access</h2>
+      <div class="links-grid">
+        <a href="malware.html" class="link-card block-form-section">
+          <h3>Malware Analysis</h3>
+          <p>Analyze malware samples using static, dynamic, and hybrid methods.</p>
+        </a>
+        <a href="dna.html" class="link-card block-form-section">
+          <h3>DNA Analysis</h3>
+          <p>Generate and track DNA sequences for malware samples.</p>
+        </a>
+        <a href="lineage.html" class="link-card block-form-section">
+          <h3>Lineage Tracking</h3>
+          <p>Track malware evolution and predict future mutations.</p>
+        </a>
+        <a href="blockchain.html" class="link-card block-form-section">
+          <h3>Blockchain Verification</h3>
+          <p>Verify and store forensic evidence on the blockchain.</p>
+        </a>
+        <a href="reports.html" class="link-card block-form-section">
+          <h3>Report Management</h3>
+          <p>Generate and download malware analysis reports.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="block-form-section">
+      <h2>📈 Dashboard Report</h2>
+      <p>Generate a report of the current dashboard statistics.</p>
+      <div>
+        <label><input type="radio" name="report-format" value="json" checked> JSON</label>
+        <label><input type="radio" name="report-format" value="txt"> TXT</label>
+        <button id="generate-report-btn">Generate Report</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Malware DNA Analysis Platform</p>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script type="module" src="../js/api.js"></script>
+  <script type="module" src="../js/dashboard.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DNA Analysis - MalDNA</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Malware DNA Analysis</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Generate DNA -->
+    <section class="dna-section">
+      <h2>Generate Malware DNA Sequence</h2>
+      <form id="dna-generate-form">
+        <label for="file-input">File:</label>
+        <input type="file" id="file-input" required />
+        <label for="sample-id">Sample ID:</label>
+        <input type="text" id="sample-id" placeholder="Enter Sample ID" required />
+        <button type="submit">Generate DNA</button>
+      </form>
+      <pre id="dna-generate-result" class="dna-result-block"></pre>
+    </section>
+
+    <!-- Compare DNA -->
+    <section class="dna-section">
+      <h2>Compare DNA Sequences</h2>
+      <form id="dna-compare-form">
+        <label for="sample-id-1">Sample ID 1:</label>
+        <input type="text" id="sample-id-1" placeholder="Enter Sample ID 1" required />
+        <label for="sample-id-2">Sample ID 2:</label>
+        <input type="text" id="sample-id-2" placeholder="Enter Sample ID 2" required />
+        <button type="submit">Compare</button>
+      </form>
+      <pre id="dna-compare-result" class="dna-result-block"></pre>
+    </section>
+
+    <!-- Detect Mutations -->
+    <section class="dna-section">
+      <h2>Detect Mutations</h2>
+      <form id="mutation-detect-form">
+        <label for="mutation-sample-id">Sample ID:</label>
+        <input type="text" id="mutation-sample-id" placeholder="Enter Sample ID" required />
+        <button type="submit">Detect Mutations</button>
+      </form>
+      <pre id="mutation-detect-result" class="dna-result-block"></pre>
+    </section>
+
+    <!-- Retrieve DNA Family -->
+    <section class="dna-section">
+      <h2>Retrieve DNA Family</h2>
+      <form id="family-retrieve-form">
+        <label for="family-name">Family Name:</label>
+        <input type="text" id="family-name" placeholder="Enter Family Name" required />
+        <button type="submit">Retrieve DNA</button>
+      </form>
+      <pre id="family-retrieve-result" class="dna-result-block"></pre>
+    </section>
+
+    <!-- Visualize DNA Graph -->
+    <section class="dna-section">
+      <h2>Visualize DNA Similarity Graph</h2>
+      <form id="dna-visualization-form">
+        <label for="dna-sample-name">Sample Filename:</label>
+        <input type="text" id="dna-sample-name" placeholder="Enter Sample Filename" required />
+        <button type="submit">Visualize Graph</button>
+      </form>
+      <pre id="dna-visualization-result" class="dna-result-block"></pre>
+      <div id="dna-graph-container" style="margin-top: 2rem;"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Malware DNA Analysis Platform</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script type="module" src="../js/api.js"></script>
+  <script type="module" src="../js/dna.js"></script>
+  <script type="module" src="../js/main.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</body>
+</html>
+

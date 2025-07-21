@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Audit Logs & Monitoring - MalDNA</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body>
+
+  <!-- Background -->
+  <div class="background-overlay"></div>
+
+  <!-- Header -->
+  <header>
+    <h1>🕵️ Audit Logs & System Activity Monitoring</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Banner -->
+    <section class="image-banner">
+      <img src="../assets/images/forensic_layered_analysis_view.png" alt="Forensic Layered Analysis View" />
+    </section>
+
+    <!-- View Audit Logs -->
+    <section class="audit-section">
+      <h2>📜 View Audit Logs</h2>
+      <form id="filter-logs-form" class="form-card">
+        <div class="form-row">
+          <label for="start-date">Start Date:</label>
+          <input type="date" id="start-date" required />
+        </div>
+
+        <div class="form-row">
+          <label for="end-date">End Date:</label>
+          <input type="date" id="end-date" required />
+        </div>
+
+        <div class="form-row">
+          <label for="user-filter">User:</label>
+          <input type="text" id="user-filter" placeholder="Enter User ID (Optional)" />
+        </div>
+
+        <div class="form-row">
+          <label for="activity-type">Activity Type:</label>
+          <select id="activity-type">
+            <option value="">All</option>
+            <option value="login">Login</option>
+            <option value="upload">Upload</option>
+            <option value="analysis">Analysis</option>
+            <option value="blockchain">Blockchain</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-primary">🔍 Filter Logs</button>
+      </form>
+
+      <div id="logs-container" class="logs-output"></div>
+    </section>
+
+    <!-- Export Logs -->
+    <section class="audit-section">
+      <h2>📤 Export Logs</h2>
+      <form id="export-logs-form" class="form-card">
+        <label for="export-format">Format:</label>
+        <select id="export-format" required>
+          <option value="json">JSON</option>
+          <option value="csv">CSV</option>
+        </select>
+        <button type="submit" class="btn-secondary">⬇️ Export Logs</button>
+      </form>
+      <div id="export-result" class="export-message"></div>
+    </section>
+
+    <!-- Activity Trends -->
+    <section class="audit-section">
+      <h2>📊 System Activity Trends</h2>
+      <button id="fetch-analytics-btn" class="btn-accent">📈 Fetch Analytics</button>
+      <canvas id="activity-trends-chart" width="800" height="400"></canvas>
+      <p id="chart-error" class="error-msg"></p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Malware DNA Analysis Platform</p>
+  </footer>
+
+  <!-- JS Modules -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="../js/api.js"></script>
+  <script type="module" src="../js/audit.js"></script>
+  <script type="module" src="../js/main.js"></script>
+
+</body>
+</html>
+

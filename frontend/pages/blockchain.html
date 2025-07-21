@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blockchain Evidence Storage & Verification - MalDNA</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/blockchain.css" />
+</head>
+<body>
+  <header class="cyber-header">
+    <img src="../assets/images/blockchain_verification_module.png" alt="Blockchain Module" class="section-banner" />
+    <h1>🧬 Blockchain Evidence & Malware DNA Verification</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">🏠 Home</a></li>
+        <li><a href="dashboard.html">📊 Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="glass-container">
+
+    <!-- Store DNA -->
+    <section class="block-form-section">
+      <h2>1️⃣ Store Malware DNA on Blockchain</h2>
+      <form id="store-dna-form">
+        <input type="text" id="dna-sample-id" placeholder="🔬 DNA Sample ID" required />
+        <button class="neon-button" type="submit">💾 Store DNA</button>
+      </form>
+      <pre id="dna-store-result" class="result-box"></pre>
+    </section>
+
+    <!-- Verify DNA -->
+    <section class="block-form-section">
+      <h2>2️⃣ Verify Malware DNA</h2>
+      <form id="verify-dna-form">
+        <input type="text" id="verify-dna-sample-id" placeholder="🧪 Verify DNA Sample ID" required />
+        <button class="neon-button" type="submit">✅ Verify</button>
+      </form>
+      <pre id="dna-verify-result" class="result-box"></pre>
+    </section>
+
+    <!-- Store Forensic Evidence -->
+    <section class="block-form-section">
+      <h2>3️⃣ Store Forensic Evidence</h2>
+      <form id="store-forensic-form">
+        <input type="text" id="forensic-evidence-id" placeholder="📁 Evidence ID" required />
+        <button class="neon-button" type="submit">💾 Store Evidence</button>
+      </form>
+      <pre id="forensic-store-result" class="result-box"></pre>
+    </section>
+
+    <!-- Retrieve History -->
+    <section class="block-form-section">
+      <h2>4️⃣ Retrieve Forensic History</h2>
+      <form id="retrieve-history-form">
+        <input type="text" id="history-evidence-id" placeholder="📜 Evidence ID" required />
+        <button class="neon-button" type="submit">🔍 Retrieve</button>
+      </form>
+      <pre id="history-retrieve-result" class="result-box"></pre>
+    </section>
+
+    <!-- Verify Blockchain Integrity -->
+    <section class="block-form-section">
+      <h2>5️⃣ Verify Blockchain Evidence Integrity</h2>
+      <form id="verify-integrity-form">
+        <input type="text" id="integrity-evidence-id" placeholder="🔐 Integrity Evidence ID" required />
+        <button class="neon-button" type="submit">🧿 Verify Integrity</button>
+      </form>
+      <pre id="integrity-verify-result" class="result-box"></pre>
+    </section>
+  </main>
+
+  <footer class="cyber-footer">
+    <p>&copy; 2025 Malware DNA Analysis Platform</p>
+  </footer>
+
+  <!-- JS Files -->
+  <script type="module" src="../js/api.js"></script>
+  <script type="module" src="../js/blockchain.js"></script>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
+

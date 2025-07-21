@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forensic Analysis - MalDNA</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🧪 Blockchain-Backed Forensic Analysis</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">🏠 Home</a></li>
+        <li><a href="dashboard.html">📊 Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Upload Evidence -->
+    <section class="forensics-section">
+      <h2>📤 Upload Forensic Evidence</h2>
+      <form id="upload-evidence-form">
+        <label for="evidence-file">Select Evidence File:</label>
+        <input type="file" id="evidence-file" required />
+        <button type="submit">Upload</button>
+      </form>
+      <div id="upload-result" class="dna-result-block"></div>
+    </section>
+
+    <!-- Analyze Memory / Disk -->
+    <section class="forensics-section">
+      <h2>🧠 Analyze Memory / 💽 Disk</h2>
+      <div class="analysis-options">
+        <button id="analyze-memory-btn">Analyze Memory Dump</button>
+        <button id="analyze-disk-btn">Analyze Disk Image</button>
+      </div>
+      <div id="analysis-result" class="dna-result-block"></div>
+    </section>
+
+    <!-- Generate Report -->
+    <section class="forensics-section">
+      <h2>📝 Generate Forensic Report</h2>
+      <form id="generate-report-form">
+        <label for="report-sample-id">Sample ID:</label>
+        <input type="text" id="report-sample-id" placeholder="Enter Sample ID" required />
+        <button type="submit">Generate Report</button>
+      </form>
+      <div id="report-result" class="dna-result-block"></div>
+    </section>
+
+    <!-- Verify Evidence Integrity -->
+    <section class="forensics-section">
+      <h2>🔒 Verify Evidence Integrity</h2>
+      <form id="verify-integrity-form">
+        <label for="integrity-evidence-id">Evidence ID:</label>
+        <input type="text" id="integrity-evidence-id" placeholder="Enter Evidence ID" required />
+        <button type="submit">Verify</button>
+      </form>
+      <div id="verify-result" class="dna-result-block"></div>
+    </section>
+
+    <!-- Blockchain History -->
+    <section class="forensics-section">
+      <h2>⛓️ Blockchain Evidence History</h2>
+      <form id="retrieve-history-form">
+        <label for="history-evidence-id">Evidence ID:</label>
+        <input type="text" id="history-evidence-id" placeholder="Enter Evidence ID" required />
+        <button type="submit">Retrieve History</button>
+      </form>
+      <div id="history-result" class="dna-result-block"></div>
+    </section>
+  </main>
+
+  <!-- Optional Image Section -->
+  <section class="forensics-section">
+    <h2>🖼️ Visualization</h2>
+    <img src="../assets/forensic_analysis_illustration.png" alt="Forensic Analysis Illustration" style="width: 100%; border-radius: 8px;" />
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Malware DNA Analysis Platform</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script type="module" src="../js/api.js"></script>
+  <script type="module" src="../js/forensics.js"></script>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
+

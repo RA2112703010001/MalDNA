@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malware Lineage Tracking - MalDNA</title>
+
+  <!-- Neon Cyber Theme CSS -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+ 
+  <!-- D3.js for Phylogenetic Tree -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header"></div>
+
+  <!-- Sidebar -->
+  <div id="sidebar"></div>
+
+  <main>
+    <!-- Visual Banner -->
+    <section style="text-align: center; margin-top: 30px;">
+      <img 
+        src="../assets/images/dna.png" 
+        alt="Lineage Visualization"
+        style="width: 64px; height: 64px; border-radius: 10px; box-shadow: 0 0 15px #00e5ff;" 
+      />
+    </section>
+
+    <!-- List All IDs Section -->
+    <section class="lineage-section">
+      <h2>List All IDs</h2>
+      <button id="listIdsBtn">List IDs</button>
+      <div class="dna-result-block" id="resultBox"></div>
+    </section>
+
+    <!-- Lineage Reconstruct Section -->
+    <section class="lineage-section">
+      <h2>Reconstruct Malware Lineage</h2>
+      <form id="lineage-reconstruct-form">
+        <input type="text" id="sample-id" placeholder="Enter Sample ID" required />
+        <button type="submit">Reconstruct</button>
+      </form>
+      <div class="dna-result-block" id="lineage-reconstruct-result"></div>
+    </section>
+
+    <!-- Predict Malware Lineage Section -->
+    <section class="lineage-section">
+      <h2>Predict Malware Lineage using AI</h2>
+      <form id="predict-lineage-form">
+        <input type="text" id="dna-id" placeholder="Enter DNA ID" required />
+        <button type="submit">Predict Lineage</button>
+      </form>
+      <div class="dna-result-block" id="predict-lineage-result"></div>
+    </section>
+
+    <!-- Blockchain Lineage Verification Section -->
+    <section class="lineage-section">
+      <h2>Verify Lineage on Blockchain</h2>
+      <form id="blockchain-verify-form">
+        <input type="text" id="lineage-id" placeholder="Enter Lineage ID" required />
+        <button type="submit">Verify</button>
+      </form>
+      <div class="dna-result-block" id="blockchain-verify-result"></div>
+    </section>
+
+    <!-- Mutation History Section -->
+    <section class="lineage-section">
+      <h2>Get Mutation History</h2>
+      <form id="mutation-history-form">
+        <input type="text" id="history-sample-id" placeholder="Enter Sample ID" required />
+        <button type="submit">Get History</button>
+      </form>
+      <div class="dna-result-block" id="mutation-history-result"></div>
+    </section>
+
+    <!-- Predict Future Mutations Section -->
+    <section class="lineage-section">
+      <h2>Predict Future Mutations</h2>
+      <form id="predict-future-mutations-form">
+        <input type="text" id="predict-future-sample-id" placeholder="Enter Sample ID" required />
+        <button type="submit">Predict</button>
+      </form>
+      <div class="dna-result-block" id="predict-future-mutations-result"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- JS Modules -->
+  <script type="module" src="../js/api.js"></script>
+  <script type="module" src="../js/lineage.js"></script>
+  <script type="module" src="../js/main.js"></script>
+
+  <!-- Load Templates -->
+  <script>
+    fetch("../templates/header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    fetch("../templates/sidebar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("sidebar").innerHTML = data);
+
+    fetch("../templates/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+</body>
+</html>
+

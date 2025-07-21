@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Registration - MalDNA</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body style="background-image: url('../assets/images/background_main.png'); background-size: cover;">
+
+  <!-- Header -->
+  <header class="site-header">
+    <img src="../assets/images/user_access_management_portal.png" alt="User Access" class="header-image" />
+    <h1>User Registration</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main class="user-section">
+    <h2>Create an Account</h2>
+    <form id="register-form">
+      <label for="register-username">Username</label>
+      <input type="text" id="register-username" name="username" placeholder="Enter Username" required />
+
+      <label for="register-email">Email</label>
+      <input type="email" id="register-email" name="email" placeholder="Enter Email" required />
+
+      <label for="register-password">Password</label>
+      <input type="password" id="register-password" name="password" placeholder="Enter Password" required />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <div id="register-result" class="result-box"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Malware DNA Analysis Platform</p>
+  </footer>
+
+  <!-- JavaScript Modules -->
+  <script type="module" src="../js/register.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Management - MalDNA</title>
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body style="background-image: url('../assets/images/background_main.png'); background-size: cover;">
+
+  <!-- Header -->
+  <header class="site-header">
+    <img src="../assets/images/user_access_management_portal.png" alt="User Management Visual" class="header-image"/>
+    <h1>User Access & Role Management</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="user-main-container">
+
+    <!-- User Registration -->
+    <section class="user-section">
+      <h2>Register New User</h2>
+      <form id="register-form">
+        <label for="register-email">Email:</label>
+        <input type="email" id="register-email" placeholder="Enter Email" required />
+
+        <label for="register-password">Password:</label>
+        <input type="password" id="register-password" placeholder="Enter Password" required />
+
+        <button type="submit">Register</button>
+      </form>
+      <div id="register-result" class="result-box"></div>
+    </section>
+
+    <!-- User Login -->
+    <section class="user-section">
+      <h2>Login Existing User</h2>
+      <form id="login-form">
+        <label for="login-email">Email:</label>
+        <input type="email" id="login-email" placeholder="Enter Email" required />
+
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" placeholder="Enter Password" required />
+
+        <button type="submit">Login</button>
+      </form>
+      <div id="login-result" class="result-box"></div>
+    </section>
+
+    <!-- List Users (Admin) -->
+    <section class="user-section">
+      <h2>All Registered Users</h2>
+      <button id="list-users-btn">List Users</button>
+      <div id="users-list-result" class="result-box"></div>
+    </section>
+
+    <!-- Update User Role -->
+    <section class="user-section">
+      <h2>Update User Role (Admin)</h2>
+      <form id="update-role-form">
+        <label for="user-id">User ID:</label>
+        <input type="text" id="user-id" placeholder="Enter User ID" required />
+
+        <label for="new-role">New Role:</label>
+        <input type="text" id="new-role" placeholder="Enter New Role" required />
+
+        <button type="submit">Update Role</button>
+      </form>
+      <div id="role-update-result" class="result-box"></div>
+    </section>
+
+    <!-- Deactivate User -->
+    <section class="user-section">
+      <h2>Deactivate User</h2>
+      <form id="deactivate-user-form">
+        <label for="deactivate-user-id">User ID:</label>
+        <input type="text" id="deactivate-user-id" placeholder="Enter User ID" required />
+        <button type="submit">Deactivate</button>
+      </form>
+      <div id="deactivate-user-result" class="result-box"></div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Malware DNA Analysis Platform</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="../js/api.js"></script>
+  <script type="module" src="../js/user.js"></script>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
+
